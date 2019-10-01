@@ -22,3 +22,24 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+x = f'14_cal.py {datetime.now().strftime("%m")} [{datetime.now().strftime("%Y")}]'
+
+
+def str():
+    print('============================================')
+    print('Please input your preferred month and year')
+    month = input('Enter month: ')
+    year = input('Enter year: ')
+    if len(month) == 0 or len(year) == 0:
+        print('Printing current month calender')
+        print(
+            f'{calendar.month(int(datetime.now().strftime("%Y")), int(datetime.now().strftime("%m")), 2, 1)}'
+        )
+        return x
+    else:
+        print(calendar.month(int(year), int(month), 2, 1))
+        return f'14_cal.py {month} [{year}]'
+
+
+print(str())
