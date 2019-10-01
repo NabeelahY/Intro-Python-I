@@ -26,7 +26,7 @@ from datetime import datetime
 x = f'14_cal.py {datetime.now().strftime("%m")} [{datetime.now().strftime("%Y")}]'
 
 
-def str():
+def cal():
     print('============================================')
     print('Please input your preferred month and year')
     month = input('Enter month: ')
@@ -42,4 +42,4 @@ def str():
         return f'14_cal.py {month} [{year}]'
 
 
-print(str())
+print(cal())
